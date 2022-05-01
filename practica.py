@@ -559,3 +559,15 @@ def sumar5(number):
 print(firstFunction(sumar5,10))
 
 """Function pure"""
+
+def pureFunction(number1,number2):
+    temp= number1+2*number2
+    return temp/(2*number1+number2)
+
+"""Function inpure"""
+someList=[]
+def inpureFunction(argument):
+    someList.append(argument)
+    print(someList)
+
+inpureFunction('Hello world')
