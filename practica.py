@@ -549,3 +549,13 @@
 # print(dictionary)
 
 """Programation funtional"""
+
+def firstFunction(function,argument):
+    return function(function(function(argument)))
+
+def sumar5(number):
+    return number+5
+
+print(firstFunction(sumar5,10))
+
+"""Function pure"""
