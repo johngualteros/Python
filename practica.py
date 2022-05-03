@@ -535,7 +535,7 @@
 # calcularRaizCuadrada(number)
 
 """first module python intermediate"""
-
+#first Solution
 # text=input('Please enter the text: ')
 # dictionary={}
 
@@ -550,24 +550,70 @@
 
 """Programation funtional"""
 
-def firstFunction(function,argument):
-    return function(function(function(argument)))
+# def firstFunction(function,argument):
+#     return function(function(function(argument)))
 
-def sumar5(number):
-    return number+5
+# def sumar5(number):
+#     return number+5
 
-print(firstFunction(sumar5,10))
+# print(firstFunction(sumar5,10))
 
 """Function pure"""
 
-def pureFunction(number1,number2):
-    temp= number1+2*number2
-    return temp/(2*number1+number2)
+# def pureFunction(number1,number2):
+#     temp= number1+2*number2
+#     return temp/(2*number1+number2)
 
 """Function inpure"""
-someList=[]
-def inpureFunction(argument):
-    someList.append(argument)
-    print(someList)
+# someList=[]
+# def inpureFunction(argument):
+#     someList.append(argument)
+#     print(someList)
 
-inpureFunction('Hello world')
+# inpureFunction('Hello world')
+
+"""comprobar si es palindromo"""
+# word = input("please enter the text: ")#capturamos el texto digitado por el usuario
+# if str(word) == str(word)[::-1] : #if donde comparamos el texto normal y a la reversa el conjunto [::-1] sirve para darle reversa al string
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+
+"""Lambdas"""
+# def myfunction(number,arguments):
+#     return number(arguments)
+
+# print(myfunction(lambda x:2*x*x,5))
+
+
+# def polynomial(x):
+#     return x**2 +5*x +4
+# # print (polynomial(-4))
+# print((lambda x:x**2 +5*x +4)(-4))
+
+
+
+
+# number=int(input("Please enter the number in with you want to generate the raise square: "))
+
+# def CalculatorRaiceSquare(number):
+#     pares=[i*i for i in range(number+1) if i**i %2==0]
+    
+#     inpares=[i*i for i in range(number+1) if i**i %2!=0]
+
+#     print(pares)
+#     print(inpares)
+
+# CalculatorRaiceSquare(number)
+from time import sleep
+
+number=4
+
+for number in range(1,number+1):
+    print(number)
+    sleep(1)  # Wait 1 second
+
+print("Ok👾") 
+
+
+    
