@@ -605,15 +605,35 @@
 #     print(inpares)
 
 # CalculatorRaiceSquare(number)
-from time import sleep
+"""Map"""
+# number=int(input("Please enter the number: "))
 
-number=4
+# def addNumber(x):
+#     return x+number
 
-for number in range(1,number+1):
-    print(number)
-    sleep(1)  # Wait 1 second
+# nums=[11,22,33,44,55,66,77,88,99,111]
+# result=list(map(addNumber,nums))
+# print(result)
 
-print("Ok👾") 
+"""Filter"""
 
+# def filterFunction(x):
+#     return x<=5
+# nums=1,2,3,4,5,6,7,8,9,10,11,12
+# print(list(filter(filterFunction,nums)))
 
-    
+# #other Example
+
+# numbers=[11,22,33,44,55,66,77,88,99,111]
+# print(list(filter(lambda x:x%2!=0,numbers)))
+
+"""Exercise entrevista"""
+
+#retornar las 3 primeras palabras de una lista 
+
+words="Hello world this is one example for the exercise"
+def Result(words):
+    splited=words.split()
+    return print(splited[:3])
+
+Result(words)
