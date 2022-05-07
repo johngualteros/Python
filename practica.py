@@ -631,9 +631,231 @@
 
 #retornar las 3 primeras palabras de una lista 
 
-words="Hello world this is one example for the exercise"
-def Result(words):
-    splited=words.split()
-    return print(splited[:3])
+# words="Hello world this is one example for the exercise"
+# def Result(words):
+#     splited=words.split()
+#     return print(splited[:3])
 
-Result(words)
+# Result(words)
+
+"""Generadores yield"""
+# def countdown():
+#     i=5
+#     while i>0:
+#         yield i
+#         i-=1
+
+# for i in countdown():
+#     print(i)
+
+# from time import sleep
+
+
+# def infinite_numbers():
+#     i=1
+#     while True:
+#         yield i
+#         i+=1
+#         sleep(1)
+
+# for i in infinite_numbers():
+#     print(i)
+
+
+# def numbers(x):
+#     for i in range(x):
+#         if i%2==0:
+#             yield i
+
+# print(list(numbers(11)))
+# from time import sleep
+
+
+# def printDownload():
+#     i=0
+#     while i<=100:
+#         yield i
+#         i+=1
+#         if i>=20:
+#             sleep(0.1)
+#         else:
+#             sleep(0.4)
+
+# for i in printDownload():
+#     print('tu descarga va en: ',str(i));
+
+
+"""decoradores"""
+# def decor(func):
+#     def wrap():
+#         print("=========")
+#         func()
+#         print("=========")
+#     return wrap
+# @decor
+# def print_text():
+#     print("Hello World!!")
+
+# print_text()
+
+
+#decorator exercise 
+# def decorate(function):
+#     def wrap(num):
+#         print("***")
+#         function(num)
+#         print("***")
+#         print("END OF PAGE")
+#     return wrap
+# @decorate
+# def invoice(num):
+#     print("INVOICE #"+num)
+
+# invoice(input());
+
+"""Recursividad"""
+# def factorial(x):
+#     if x==1:
+#         return 1
+#     else:
+#         return  x*factorial(x-1)
+
+# print(factorial(5))
+
+# def is_even(x):
+#     if x==0:
+#         return True
+#     else:
+#         return is_odd(x-1)
+
+# def is_odd(x):
+#     return  not is_even(x)
+
+# print(is_odd(17))
+# print(is_even(23))
+
+"""Args"""
+# def function(named_arg,*arg):
+#     print(named_arg)
+#     print(arg)
+# function(1,2,3,4,5)
+# def function(x,y=7,*args,**kwargs):
+#     print(kwargs)
+
+# function(2,3,4,5,6,a=7,b=8)
+
+"""First Module in Solo learn python for intermediate"""
+# def spell(txt):
+#     reverser=txt[::-1]
+#     for char in reverser:
+#         print(char)
+
+
+# txt=input()
+# spell(txt)
+
+"""Programation oriented objects"""
+
+"""Class"""
+# class Cat:
+#     def __init__(self,color,legs):
+#         self.color=color
+#         self.legs=legs
+#         print("hi your color is",color," and your legs is ",legs)
+
+# phoenix = Cat('orange',4)
+# tommy = Cat('black',3)
+
+# print(phoenix.color)
+
+# class Dog:
+#     def __init__(self,name,color):
+#         self.name=name
+#         self.color=color
+
+#     def saludar(self):
+#         print("woof")
+    
+#     def data(self):
+#         print("wooff woof my name is: ",self.name," and my color is: ",self.color)
+
+# Max=Dog("max","brown")
+# Max.saludar()
+# Max.data()
+
+# class Animal:
+#     def __init__(self,name,color):
+#         self.name=name
+#         self.color=color
+
+# class Dog(Animal):
+#     def bark(self):
+#         print("woof")
+
+# class Cat(Animal):
+#     def miau(self):
+#         print("miau")
+
+# cat1=Cat("toon","green")
+# dog1=Dog("toon","green")
+
+# cat1.miau()
+# dog1.bark()
+
+# class Wolf:
+#     def __init__(self,name,color):
+#         self.name=name
+#         self.color=color
+#     def bark(self):
+#         print("grrrr")
+
+# class Dog(Wolf):
+#     def bark(self):
+#         print("wooof")
+
+# mac=Dog("max","brown")
+# mac.bark()
+
+
+from turtle import width
+
+
+class A:
+    def spam(self):
+        print(1)
+
+class B(A):
+    def spam(self):
+        print(2)
+        super().spam()
+
+B().spam(
+
+)
+
+"""Exercise perimeter the rectangle"""
+
+
+class Shape:
+    def __init__(self,width,heigth):
+        self.width=width
+        self.heigth=heigth
+    
+    def area(self):
+        resultArea=self.width*self.heigth
+        print(str(resultArea))
+
+class Rectangle(Shape):
+    def perimeter(self):
+        resultPerimeter=2*(self.width+self.heigth)
+        print(str(resultPerimeter))
+
+
+width=int(input("Width: "))
+heigth=int(input("Height: "))
+
+firstRectangle=Rectangle(width,heigth)
+
+firstRectangle.area()
+firstRectangle.perimeter()
+
