@@ -817,45 +817,321 @@
 # mac.bark()
 
 
-from turtle import width
+# from turtle import width
 
 
-class A:
-    def spam(self):
-        print(1)
+# class A:
+#     def spam(self):
+#         print(1)
 
-class B(A):
-    def spam(self):
-        print(2)
-        super().spam()
+# class B(A):
+#     def spam(self):
+#         print(2)
+#         super().spam()
 
-B().spam(
+# B().spam(
 
-)
+# )
 
 """Exercise perimeter the rectangle"""
 
 
-class Shape:
-    def __init__(self,width,heigth):
-        self.width=width
-        self.heigth=heigth
+# class Shape:
+#     def __init__(self,width,heigth):
+#         self.width=width
+#         self.heigth=heigth
     
-    def area(self):
-        resultArea=self.width*self.heigth
-        print(str(resultArea))
+#     def area(self):
+#         resultArea=self.width*self.heigth
+#         print(str(resultArea))
 
-class Rectangle(Shape):
-    def perimeter(self):
-        resultPerimeter=2*(self.width+self.heigth)
-        print(str(resultPerimeter))
+# class Rectangle(Shape):
+#     def perimeter(self):
+#         resultPerimeter=2*(self.width+self.heigth)
+#         print(str(resultPerimeter))
 
 
-width=int(input("Width: "))
-heigth=int(input("Height: "))
+# width=int(input("Width: "))
+# heigth=int(input("Height: "))
 
-firstRectangle=Rectangle(width,heigth)
+# firstRectangle=Rectangle(width,heigth)
 
-firstRectangle.area()
-firstRectangle.perimeter()
+# firstRectangle.area()
+# firstRectangle.perimeter()
+
+
+"""Method magics are the method will be called in the start with __"""
+
+
+# class Vector2d:
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#     def __add__(self,other):
+#         return Vector2d(self.x+other.x,self.y+other.y)
+
+# first=Vector2d(5,7)
+# second=Vector2d(3,9)
+
+# result=first+second
+
+# print (result.x)
+# print (result.y)
+
+
+"""
+More methos magics
+__sub__ for -
+__mul__ for *
+__truediv__ for /
+__floordiv__ for //
+__mod__ for %
+__pow__ for **
+__and__ for &
+__xor__ for ^
+__or__ for |
+"""
+
+# class SpecialString:
+#     def __init__(self,cont):
+#         self.cont = cont
+
+#     def __truediv__(self,other):
+#         line ="="*len(other.cont)
+#         return "\n".join([self.cont,line,other.cont])
+
+# spam= SpecialString("spam")
+# hello= SpecialString("hello World")
+
+# print(spam/hello)
+
+"""
+More method magics for comparisions
+__it__ for <
+__ie__ for <=
+__eq__ for ==
+__ne__ for !=
+__gt__ for >
+__ge__ for >=
+
+"""
+# class SpecialString:
+#     def __init__(self,cont):
+#         self.cont = cont
+#     def __gt__(self,other):
+#         for index in range(len(other.cont+1)):
+#             result= other.cont[:index]+">"+self.cont
+#             result+= ">"+other.cont[index:]
+#             print(result)
+
+# spam= SpecialString("spam")
+# hello= SpecialString("hello")
+# spam>hello
+
+"""
+Other more method magics
+__len__ for len
+__getitem__ for get indexar
+__setitem__ for set asignar
+__delitem__ for delete
+__iter__ for iter
+__contains__ for in
+__call__ for call objects in functions
+__str__ for string
+__int__ for integer 
+"""
+
+# import random
+# 
+# 
+# class Vaguelist:
+    # def __init__(self,cont):
+        # self.cont = cont
+    # def __getitem__(self,index):
+        # return self.cont[index+random.randint(-1,1)]
+    # def __len__(self):
+        # return random.randint(0,len(self.cont)*2)
+# 
+# vague_list = Vaguelist(["A","B","C","D","E","F","G","H","I"])
+# 
+# print(len(vague_list))
+# print(len(vague_list))
+# print(vague_list[2])
+# print(vague_list[2])
+
+
+
+"""Ocultacion de  datos"""
+# class Queue:
+#     def __init__(self,contents):
+#         self._hiddenList = list(contents)#the under core say this attribute is private and 2 is more private
+    
+#     def push(self,value):
+#         return self._hiddenList.insert(0,value)
+#     def pop(self):
+#         return self._hiddenList.pop(-1)
+
+#     def __repr__(self):
+#         return "Queue({})".format(self._hiddenList)
+
+# queue=Queue([1,2,3,4])
+# print(queue)
+# queue.push(0)
+# print(queue)
+# queue.pop()
+# print(queue)
+# print(queue._hiddenList)
+
+# class Spam:
+#     __egg=888
+#     def printEgg(self):
+#         print(self.__egg)
+
+# s=Spam()
+# s.printEgg()
+# print(s._Spam__egg)
+
+"""Is Palindrome"""
+
+# text=input("Please enter the word or text for comprobate is palindrome: ")
+
+# def validationPalindrome(text):
+#     if text == text[::-1]:
+#         return True
+#     else:
+#         return False
+
+
+
+# print(validationPalindrome(text))
+
+"""Method of class"""
+# class Rectangle:
+#     def __init__(self,width,heigth):
+#         self.width = width
+#         self.heigth = heigth
+    
+#     def calculate_area(self):
+#         return self.width * self.heigth
+
+#     @classmethod
+#     def new_square(cls,side_length):
+#         return cls(side_length,side_length)
+
+# square= Rectangle.new_square(5)
+# print(square.calculate_area())
+
+"""los metodos estaticos son iguales que los de la clase solo que estos no reciben argumenttos adicionales"""
+
+# class Pizza:
+#     def __init__(self,topping):
+#         self.topping = topping
+#     @staticmethod
+#     def validateToppings(topping):
+#         if topping=="pineapple":
+#             raise ValueError("no pineapples!")
+#         else:
+#             return True
+
+# ingredients = ["cheese","onions","spam"]
+# if all(Pizza.validateToppings(i) for i in ingredients):
+#     pizza= Pizza(ingredients)
+
+"""
+propertys
+"""
+# class Pizza:
+#     def __init__(self,toppings):
+#         self.toppings = toppings
+
+#     @property
+#     def pineapple_allowed(self):
+#         result=False
+#         return result
+
+
+# pizza = Pizza(['cheese','onions','spam'])
+# print(pizza.pineapple_allowed)
+# pizza.pineapple_allowed=True
+
+# class Employee:
+#     def __init__(self,first,last):
+#         self.first = first
+#         self.last = last
+#     @property
+#     def fullName(self):
+#         return "{} {}".format(self.first, self.last)
+    
+#     @property
+#     def email(self):
+#         return "{}{}@gmail.com".format(self.first, self.last)
+
+# employee1=Employee("John","Gualteros")
+# print(employee1.first)
+# print(employee1.last)
+# print(employee1.email)
+# print(employee1.fullName)
+
+# class Pizza:
+#     def __init__(self,toppings):
+#         self.toppings = toppings
+#         self.pineapple_allowed=False
+    
+#     @property
+#     def pineapple_allowed(self):
+#         return self.pineapple_allowed
+
+#     @pineapple_allowed.setter
+
+#     def pineapple_allowed(self,value):
+#         if value:
+#             password = input("Enter password: ")
+#         if password=="SwOrdf1sh":
+#             self.pineapple_allowed = value
+#         else:
+#             raise ValueError("Invalid password")
+
+# pizza=Pizza(["cheese", "orange"])
+# print(pizza.pineapple_allowed)
+# pizza.pineapple_allowed=True
+# print(pizza.pineapple_allowed)
+"""Module 2 for python for intermediate"""
+"""Game of shots"""
+
+class Enemy:
+    name=""
+    lives=0
+    def __init__(self,name,lives):
+        self.name = name
+        self.lives = lives
+    def hit(self):
+        self.lives-=1
+        if self.lives<=0:
+            print(self.name+' killed')
+        else:
+            print(self.name+' has ' + str(self.lives) +' lives' )
+
+class Monster(Enemy):
+    def __init__(self):
+        super().__init__('Monster',3)
+
+
+class Alien(Enemy):
+    def __init__(self):
+        super().__init__('Alien',5)
+
+
+m=Monster()
+a=Alien()
+
+while True:
+    x=input().lower()
+    if x=='gun':
+        m.hit()
+
+    if x=='laser':
+        a.hit()
+    if x== 'exit':
+        break
+
 
