@@ -1098,40 +1098,325 @@ propertys
 """Module 2 for python for intermediate"""
 """Game of shots"""
 
-class Enemy:
-    name=""
-    lives=0
-    def __init__(self,name,lives):
-        self.name = name
-        self.lives = lives
-    def hit(self):
-        self.lives-=1
-        if self.lives<=0:
-            print(self.name+' killed')
-        else:
-            print(self.name+' has ' + str(self.lives) +' lives' )
+# class Enemy:
+#     name=""
+#     lives=0
+#     def __init__(self,name,lives):
+#         self.name = name
+#         self.lives = lives
+#     def hit(self):
+#         self.lives-=1
+#         if self.lives<=0:
+#             print(self.name+' killed')
+#         else:
+#             print(self.name+' has ' + str(self.lives) +' lives' )
 
-class Monster(Enemy):
-    def __init__(self):
-        super().__init__('Monster',3)
-
-
-class Alien(Enemy):
-    def __init__(self):
-        super().__init__('Alien',5)
+# class Monster(Enemy):
+#     def __init__(self):
+#         super().__init__('Monster',3)
 
 
-m=Monster()
-a=Alien()
-
-while True:
-    x=input().lower()
-    if x=='gun':
-        m.hit()
-
-    if x=='laser':
-        a.hit()
-    if x== 'exit':
-        break
+# class Alien(Enemy):
+#     def __init__(self):
+#         super().__init__('Alien',5)
 
 
+# m=Monster()
+# a=Alien()
+
+# while True:
+#     x=input().lower()
+#     if x=='gun':
+#         m.hit()
+
+#     if x=='laser':
+#         a.hit()
+#     if x== 'exit':
+#         break
+
+"""Exceptions"""
+
+# try:
+#     num=7
+#     num2=0
+#     print(num/num2)
+#     print("Work")
+# except ZeroDivisionError:
+#     print("you try division by zero")
+
+# try:
+#     variable=10
+#     print(variable+"Hello")
+#     print(variable/variable)
+# except ZeroDivisionError:
+#     print("you try division by zero")
+# except (TypeError, ValueError):
+#     print("one error in the ejecutation")
+
+"""Finally"""
+# try:
+#     spam="spam"
+#     print("spam"/2)
+# except:
+#     print("not is possible dividision")
+# finally:
+#     print('finished the ejecutation')
+"""Else"""
+# try:
+#     print(1)
+# except:
+#     print("2")
+# else:
+#     print("3")
+
+"""-----"""
+# num=102
+# if num >100:
+#     raise ValueError
+
+# name="123"
+# raise NameError("name be a number")
+
+"""Module 3 python for intermediate developers"""
+# try:
+#     name=input("Name: ")
+#     if len(name)<4: 
+#         raise ValueError
+# except:
+#     print('Indavil Name')
+# else:
+#      print('Account Created')
+
+# class Enemy:
+#     name=""
+#     lives=0
+#     def __init__(self,name,lives):
+#         self.name=name
+#         self.lives=lives
+#     def hit(self):
+#         self.lives-=1
+#         if self.lives<=0:
+#             print("the "+self.name+" was Killed")
+#         else:
+#             print("the "+self.name+" has "+str(self.lives)+" lives")
+# class Monster(Enemy):
+#     def __init__(self):
+#         super().__init__('Monster',3)
+# class Alien(Enemy):
+#     def __init__(self):
+#         super().__init__('Alien',5)
+
+# monster=Monster()
+# alien=Alien()
+
+
+# while True:
+#     text=input(':').lower()
+#     if text=='gun':
+#         monster.hit()
+#     if text=='laser':
+#         alien.hit()
+#     if text=='exit':
+#         break
+
+"""Working with archieves"""
+
+# myfile=open("filename.txt")
+
+"""
+r is for open only in read mode
+w es para modo de escritura
+b is for open in mode binary is for images and sound
+"""
+
+#write mode
+# open("filename.txt","w")
+# #read mode
+# open("filename.txt","r")
+# open("filename.txt")
+# #binary mode
+# print("filename.txt","b")
+"""Se puede abrir en varios modos por ejemplo wb  que sera de escritura binaria"""
+
+# nameFile=open("filename.txt","rb")
+# nameFile.close()
+"""We try read the file it incluid the names teh books"""
+# file=open("/users/files/book.txt")
+# cont=file.read()
+# print(cont)
+# file.close()
+
+# file=open("/users/files/book.txt")
+# print(file.read(5))#este leera los 5 primeros caracteres
+# print(file.read(7))# este leera los 7 siguientes caracteres
+# print(file.read())
+# file.close()
+
+"""Para utilizar el metodo de cada linea se usa readLines()"""
+# file=open("filename.txt")
+# for line in file.readlines():
+#     print(line)
+
+# file.close()
+
+"""Si no necesitas la lista para cada linea puedes usar file"""
+
+# file=open("file.txt")
+# for line in file:
+#     print(line)
+# file.close()
+
+"""Writing archieves"""
+# file=open("file.txt","w")
+# file.write("This is awesomeness.\n")
+# file.close()
+
+# file=open("file.txt","r")
+# print(file.read())
+# file.close
+
+# file=open("file.txt","a")
+# file.write('\n Leonardo da vinci')
+# file.close
+
+# file=open("file.txt","r")
+# print(file.read())
+# file.read()
+"""This return the byte in this case is 6"""
+# message="Hi Guy"
+# file=open("file.txt","w")
+# amountFile=file.write(message)
+
+# print(amountFile)
+# file.close()
+
+
+"""Working with archieves"""
+# try:
+#     myfile=open("file.txt","w")
+#     cont=myfile.read()
+#     print(cont)
+# finally:
+#     myfile.close
+
+"""The alternative mode is with (with)"""
+
+# with open("file.txt") as f:
+#     print(f.read())
+
+"""Final module solo learn Python for beginners"""
+"""Codificator title"""
+# file=open("file.txt","r")
+# for line in file.readlines():
+#     if '\n' in line:
+#         print(line[0]+str(len(line)-1))
+#     else:
+#         print(line[0]+str(len(line)))
+# file.close()
+
+# file=open("file.txt","r")
+# newString=""
+# for line in file.readlines():
+#     splited=line.split(" ")
+#     for i in splited:
+#         newString+=i[0]
+
+# print(newString,"\n")
+# file.close()
+
+# try:
+#   file = open("file.txt", "r")
+
+# #your code goes here
+#   f=file.readlines()
+#   for line in f:
+#     words=line.split(" ")
+#     l=[]
+#     for word in words:
+#       l.append(word[0])
+#     print("".join(l))
+# finally:
+#   file.close()
+
+"""Python core """
+# import re
+# pattern=r"spam"
+
+# if re.match(pattern,"spamspamspam"):
+#   print ('Match')
+# else:
+#   print('No Match')
+
+# import re
+
+# pattern=r"spam"
+# if re.match(pattern,"eggspamsausagespam"):
+#   print ('Match')
+# else:
+#   print ('No Match')
+# if re.search(pattern,"eggspamsausagespam"):
+#   print ('Match')
+# else:
+#   print ('No Match')
+# print(re.findall(pattern,"eggspamsausages"))
+
+# import re
+
+# pattern = r"pam"
+
+# match=re.search(pattern,"eggspamsausages")
+
+# if match:
+#   print(match.group())
+#   print(match.start())
+#   print(match.end())
+#   print(match.span())
+
+# import re
+
+# string="Hi my name is David.Hello David!"
+# pattern=r"David"
+# new_string=re.sub(pattern,'Amy',string)
+# print(new_string)
+
+"""First module python core"""
+"""Expoonenciaciones"""
+
+# number_days=int(input("Please enter the number of days: "))
+# number=float(input("Please enter the number: "))
+
+# def exponentiation(number_days,number):
+#   result=number*(2**number_days)
+#   return result
+
+# print(exponentiation(number_days,number))
+
+
+# print(0.01*(2**5))
+"""Second module Python core"""
+# first_number=int(input(':'))
+# second_number=int(input(':'))
+
+# def suma(first_number,second_number):
+#     result=first_number+second_number
+#     return result
+
+# print(suma(second_number,first_number))
+
+"""Third module python core function"""
+"""Fizz buzz"""
+
+number=int(input('Please enter the number: '))
+
+for i in range(1,number):
+    if i%3==0 and i%5==0:
+        print('FizzBuzz')
+    elif i%3==0:
+        print('Fizz')
+    elif i%5==0:
+        print('buzz')
+    else:
+        print(i)
+    i+=1
+
+    
