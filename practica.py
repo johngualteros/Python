@@ -1403,20 +1403,469 @@ b is for open in mode binary is for images and sound
 
 # print(suma(second_number,first_number))
 
-"""Third module python core function"""
+"""Third module python core"""
 """Fizz buzz"""
 
-number=int(input('Please enter the number: '))
+# number=int(input('Please enter the number: '))
 
-for i in range(1,number):
-    if i%3==0 and i%5==0:
-        print('FizzBuzz')
-    elif i%3==0:
-        print('Fizz')
-    elif i%5==0:
-        print('buzz')
-    else:
-        print(i)
-    i+=1
+# for i in range(1,number,1):
+#     if i%3==0 and i%5==0:
+#         print('FizzBuzz')
+#     elif i%3==0:
+#         print('Fizz')
+#     elif i%5==0:
+#         print('buzz')
+#     else:
+#         print(i)
+"""Fourth module python core"""
+"""Celsius for  farenheit"""
+# celsius=float(input('Please enter the celsius: '))
+# def convert(celsius):
+#     result=9/5*celsius+32
+#     return result
 
+# print(convert(celsius))
+
+"""Fifth module python core"""
+# file=open("file.txt","r")
+# for line in file.readlines():
+#     if '\n' in line:
+#         print(line[0]+str(len(line)-1))
+#     else:
+#         print(line[0]+str(len(line)))
+# file.close()
+"""Sixth module python core"""
+"""Word more length"""
+# word=input("Please enter a word: ")
+# def calculate(word):
+#     splited=word.split(" ")
+#     print(max(splited))
+
+# calculate(word)
+
+# t=input().split()
+
+
+# for i in t:
+# 	b = max(t, key=len)
+	
+# print(b)
+
+"""Python Data Structure"""
+"""pilas
+colas
+arboles
+listas enlazadas"""
+
+"""Strings"""
+# x="Hello World"
+# #\n
+# s="Hello \n World"
+# # print(s)
+# ñ="hello \t world \t jaja"
+# p="Hello \' World \""
+# print(p)
+
+# print(p[4])
+# print(p[-1])
+# txt="hello"
+# for i in txt:
+#     print(i) 
+
+"""Num of vocals"""
+
+# vocals=['a','e','i','o','u']
+# txt=input("Please enter your text: ")
+# print(txt)
+# response=[]
+# for i in txt:
+#     if i in vocals :
+#         response+=[i]
+#     else:
+#         print(response)
+
+"""Operations on strings"""
+# x="I love python"
+# if 'love' not in x:
+#     print('yes')
+# else:
+#     print('no')
+
+# res=0
+# a='xysxxx'
+# if 'x' in a:
+#     res+=1
+# else:
+#     res=0
+# print(res)
+
+"""Manipulation of strings"""
+# x="This is some text"
+# splited=x.split(" ")
+# print(splited)
+# splited2=splited.split(" ")
+# print(splited2)
+# print(x.count('s'))
+# print(x.upper())
+# print(x.lower())
+# print(x.split(' ').split(' '))
+# print(x.replace("some text","awesome"))
+# print(len(x))
+
+"""Frecuency of letters"""
+
+#text=input("Please enter one text: ")
+#letter=input("Please enter one letter: ")
+
+#letterOnlyOne=letter[0]
+
+TimerLetterInText=text.count(letterOnlyOne)
+
+#print(TimerLetterInText)
+
+#result=(TimerLetterInText/len(text))*100
+
+#print(int(result))
+
+"""functions in list"""
+
+list=[0,2,4,3]
+
+#list.append(4)
+#list.remove(0)
+#list.insert(0,2)
+
+#print(list)
+#list.reverse()
+#print(list)
+#list.sort()
+#print(list)
+#sort=sorted(list, reverse=True)
+#print(sort)
+#print(max(list))
+#print(min(list))
+
+"""Compretion of list"""
+#lambdaArray=[i**2 for i in range(0,20)]
+
+#print(lambdaArray)
+
+#even=[i**2
+#      for i in range(0,100)
+#      if i % 2 == 0
+#     ]
+
+#print(even)
+
+"""Length media in the words"""
+#word=input("Please enter the word: ")
+#replaced=word.replace(" ","")
+#length=len(replaced)#The first parameter
+
+#splited=word.split(" ")
+#lengthSplitedWord=len(splited)#the second parameter
+
+#result=length/lengthSplitedWord
+
+#print(result)
+
+"""Dictionaries"""
+# ages={
+#     'name':'Dave',
+#     'age':24,
+#     'sex':'Female',
+# }
+
+# print(ages['name'])
+
+# nums={
+#     1:'One',
+#     2:'Two',
+#     3:'Three',
+#     'persons':['john','dani']
+# }
+# print(1 in nums)
+# print('Three' in nums)
+# print(4 not in nums)
+# print(nums.get('persons'))
+# print(nums.get(4,'Not found'))
+
+# print('really 1 in the array: {}'.format(1 in nums))
+
+"""Para agregar o eliminar en conjuntos es add y remove en listas append o insert"""
+
+"""Prueba  3 de curso de python data structures"""
+# Adultos 20 dolares
+# Niños 5 dolares
+# data = {
+#     "100-90": 25, 
+#     "42-01": 48, 
+#     "55-09": 12, 
+#     "128-64": 71, 
+#     "002-22": 18, 
+#     "321-54": 19, 
+#     "097-32": 33, 
+#     "065-135": 64, 
+#     "99-043": 80, 
+#     "111-99": 11, 
+#     "123-019": 5, 
+#     "109-890": 72, 
+#     "132-123": 27, 
+#     "32-908": 27, 
+#     "008-09": 25, 
+#     "055-967": 35,
+#     "897-99": 44, 
+#     "890-98": 56, 
+#     "344-32": 65, 
+#     "43-955": 59, 
+#     "001-233": 9,
+#     "089-111": 15, 
+#     "090-090": 17, 
+#     "56-777": 23, 
+#     "44-909": 27, 
+#     "13-111": 21, 
+#     "87-432": 15, 
+#     "87-433": 14, 
+#     "87-434": 23,
+#     "87-435": 11, 
+#     "87-436": 12, 
+#     "87-437": 16, 
+#     "94-121": 15, 
+#     "94-122": 35, 
+#     "80-089": 10, 
+#     "87-456": 8, 
+#     "87-430": 40
+# }
+# age = int(input())
+
+
+# old_revenue = 0
+# new_revenue = 0
+
+# for value in data.values():
+#     old_revenue += 20 if value >= 18 else 5
+#     new_revenue += 20 if value >= age else 5
+
+# print(int((new_revenue - old_revenue)/old_revenue * 100))
+
+"""Estructures of data with the entries of users"""
+"""Pilas
+Colas
+Listas enlazadas
+Grafos"""
+# Push and pop
+
+"""Example"""
+
+""""""# Pila
+# class Stack:
+#     def __init__(self):
+#         self.items=[]
+#     def is_empty(self):
+#         return self.items==[]
+#     def push(self,item):
+#         self.items.insert(0,item)
+#     def pop(self):
+#         return self.items.pop(0)
+#     def print_stack(self):
+#         print(self.items)
+
+# stack=Stack()
+# stack.push(1)
+# stack.push(2)
+# stack.push(3)
+
+# stack.print_stack()
+
+# stack.pop()
+# stack.print_stack()
+
+""""""# Cola
+"""rear add inseert in one extreme and front delete in the other extreme
+ this principe is called FIFO (first in first out)"""
+
+# class Queue:
+#     def __init__(self):
+#         self.items=[]
+#     def is_empty(self):
+#         return self.items==[]
+#     def enqueue(self,item):
+#         self.items.insert(0,item)
+#     def dequeue(self):
+#         return self.items.pop()
+#     def print_queue(self):
+#         print(self.items)
+
+# queue=Queue()
+# queue.enqueue("A")
+# queue.enqueue("B")
+# queue.enqueue("13")
+# queue.print_queue()
+# queue.dequeue()
+# queue.print_queue()
+
+""""""#LISTA ENLAZADA
+
+# class Node:
+#     def __init__(self,data,next):
+#         self.data=data
+#         self.next=next
+# class LinkedList:
+#     def __init__(self):
+#         self.head=None
+#     def add_a_front(self,data):
+#         self.head=Node(data,self.head)
+#     def add_a_end(self,data):
+#         if not self.head:
+#             self.head=Node(data,None)
+#             return
+#         current=self.head
+#         while current.next:
+#             current=current.next
+#         current.next=Node(data,None)
+#     def get_last_node(self):
+#         index=self.head
+#         while(index.next != None):
+#             index=index.next
+#         return index.data
+#     def is_empty(self):
+#         return self.head==None
+#     def print_list(self):
+#         index=self.head
+#         while index!=None:
+#             print(index.data,end = "=>")
+#             index=index.next
+#         print()
+
+# linked=LinkedList()
+# linked.add_a_front(1)
+# linked.add_a_end(20)
+# linked.add_a_front(2)
+
+# linked.print_list()
+# print(linked.get_last_node())
+
+""""""#Grafos
+"""One node is vertice and two united are arista"""
+# class Graph:
+#     def __init__(self,size):
+#         self.adj=[[0]*size for i in range(size)]
+#         self.size=size
+#     def add_edge(self,origin,dest):
+#         if origin>self.size or dest>self.size or origin < 0 or dest < 0:
+#             print("Invalid Edge!")
+#         else:
+#             self.adj[origin-1][dest-1]=1
+#             self.adj[dest-1][origin-1]=1
+#     def display(self):
+#         for row in self.adj:
+#             print()
+#             for val in row:
+#                 print('{:4}'.format(val),end='')
+
+# G=Graph(5)
+# G.add_edge(1,3)
+# G.add_edge(3,4)
+# G.add_edge(2,4)
+# G.display()
+"""Final module"""
+"""Certification python data structures"""
+
+def balanced(expression):
+    stack=[]
+    for char in expression:
+        if char=="(":
+            stack.insert(0,char)
+        elif char==")":
+            if '(' in stack:
+                stack.pop(0)
+            else:
+                return False
     
+    print(stack)
+
+    if len(stack)==0:
+        return True
+    else:
+        return False
+
+print(balanced(input()))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
